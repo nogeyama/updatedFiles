@@ -1,0 +1,2 @@
+C:\Users\akama\Desktop\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Release\TrackFolderChanges.csprojResolveAssemblyReference.cache
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Release\TrackFolderChanges.csprojResolveAssemblyReference.cache

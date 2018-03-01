@@ -1,0 +1,10 @@
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\bin\Debug\TrackFolderChanges.exe.config
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\bin\Debug\TrackFolderChanges.exe
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\bin\Debug\TrackFolderChanges.pdb
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.AboutForm.resources
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.MainForm.resources
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.Properties.Resources.resources
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.csproj.GenerateResource.Cache
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.csproj.CoreCompileInputs.cache
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.exe
+C:\Users\akama\Desktop\●TrackFolderChanges\trackfolderchanges\sourceCode\trackfolderchanges\TrackFolderChanges\obj\x86\Debug\TrackFolderChanges.pdb
