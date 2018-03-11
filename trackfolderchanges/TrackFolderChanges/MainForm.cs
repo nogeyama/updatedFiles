@@ -108,28 +108,49 @@ namespace TrackFolderChanges
         }
 
 
+        private static string bfr_f1 = "";  // 1回前の文字列
 
 
         private void fileSystemWatcher_Changed(object sender, FileSystemEventArgs e)
         {
             GetOrCreateNode(e.FullPath, e.ChangeType);
+            {
+                //e.FullPath
+                // ・パスとして-Upd-が含まれていたら無視
+                // 
+
+                if (e.FullPath.IndexOf("-Upd-") > 0) {
+                    ; // 予約語(システム)なのでスキップ
+                } else if (e.FullPath.IndexOf("\\.") > 0) {
+                    ; // 当初は.vs配下を外すことが狙い
+                } else if (e.FullPath == bfr_f1) {
+                    ; // 1回前の文字列と同一ならスキップ
+                    // System.IO.File.AppendAllText("C:F0311-Upd-" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "" + DateTime.Now.ToString("yyyy/MM/ddTHH:mm:ss ") + "+NoLog+ " + e.FullPath + "\r\n"); // akm
+                } else {
+                    ///ng System.Text.Encoding aaa = GetCode(e.FullPath);
+                    System.IO.File.AppendAllText("C:F0311-Upd-" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "" + DateTime.Now.ToString("yyyy/MM/ddTHH:mm:ss ") + e.ChangeType + ": " + e.FullPath + "\r\n"); // akm
+                }
+                bfr_f1 = e.FullPath;
+            }
         }
 
         private void fileSystemWatcher_Created(object sender, FileSystemEventArgs e)
         {
-            GetOrCreateNode(e.FullPath, e.ChangeType);
-            System.IO.File.AppendAllText("C:226log" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] message: " + e.FullPath + " : " + e.ChangeType + "\r\n"); // akm
-}
+            // GetOrCreateNode(e.FullPath, e.ChangeType);
+            // Many:: System.IO.File.AppendAllText("C:307-Cre-" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] message: " + e.FullPath + " : " + e.ChangeType + "\r\n"); // akm
+        }
 
         private void fileSystemWatcher_Deleted(object sender, FileSystemEventArgs e)
         {
-            GetOrCreateNode(e.FullPath, e.ChangeType);
+            // GetOrCreateNode(e.FullPath, e.ChangeType);
+            // Many:: System.IO.File.AppendAllText("C:307-Del-" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] message: " + e.FullPath + " : " + e.ChangeType + "\r\n"); // akm
         }
 
         private void fileSystemWatcher_Renamed(object sender, RenamedEventArgs e)
         {
             GetOrCreateNode(e.OldFullPath, WatcherChangeTypes.Deleted);
             GetOrCreateNode(e.FullPath, WatcherChangeTypes.Created);
+            System.IO.File.AppendAllText("C:307-Ren-" + DateTime.Now.ToString("yyyyMMdd") + ".txt", "[" + DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss") + "] message: " + e.FullPath + " : " + e.ChangeType + "\r\n"); // akm
         }
 
         private void MainForm_Load(object sender, EventArgs e)
